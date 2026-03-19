@@ -1,0 +1,60 @@
+*{
+    margin:0 auto;
+    padding:0;
+}
+
+.row
+{
+    width:1200px;
+    height: 100px;
+    background-color: blueviolet;
+}
+.logo
+{
+    width:600px;
+    height: 100px;
+    background-color: red;
+    float:left;
+    border:1px solid green;
+    padding-left:50px;
+    box-sizing: border-box;
+}
+.menu
+{
+    width:600px;
+    height: 100px;
+    background-color: aqua;
+    float:right;
+}
+.first
+{
+    width:1200px;
+    height: 300px;
+    border:1px solid red;
+    margin-top:10px;
+}
+.first>div{
+    background-color: green;
+    border:1px solid blue;
+    float:right;
+    width:171px;
+    height: 300px;
+    box-sizing: border-box;
+}
+
+
+
+.second
+{
+    width:1200px;
+    height: 300px;
+    border:1px solid red;
+    margin-top:10px;
+    display: flex;
+    
+}
+.second>div{
+    background-color: green;
+    border:1px solid blue;
+    flex:1;
+}
