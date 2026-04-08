@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0 auto;
+            padding:0;
+        }
+        .box
+        {
+            width:200px;
+            height: 200px;
+            background-color: orange;
+            text-align: center;
+            color:white;
+            margin-left:2px;
+            /* animation-name:abc;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-fill-mode: forwards;
+            animation-direction: alternate;
+            animation-delay: 1s; */
+
+            animation:abc1 infinite  2s 1s;
+        }
+
+@keyframes abc {
+        from{}
+        to{margin-left:800px;background-color: blue;width:400px;height: 300px;}
+}
+
+@keyframes abc1 {
+        0%{margin:0 0 0 0;}
+        30%{margin:0 0 0 800px;}
+        60%{margin:500px 0 0 800px;}
+        80%{margin:500px 0 0 0px;background-color: green;border-radius: 50%;}
+        100%{margin:0px 0 0 0px;}
+}
+
+
+
+
+
+    </style>
+
+</head>
+<body>
+
+
+    <div class="box"> this is css animation</div>
+
+
+
+    
+</body>
+</html>
