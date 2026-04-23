@@ -1,0 +1,83 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+
+:root
+{
+    --mw:200px;
+    --mh:60px;
+
+}
+
+.mynav
+{
+    width:100%;
+    height: 60px;
+    background-color: antiquewhite;
+}
+
+.mynav ul
+{
+    list-style-type: none;
+}
+.mynav li
+{
+    width:var(--mw);
+    height: var(--mh);
+    float:left;
+    text-align: center;
+    line-height: var(--mh);
+}
+.mynav ul li ul li ul
+{
+    margin-left:var(--mw);
+    margin-top: -var(--mh);
+}
+.mynav a
+{
+    color:white;
+    text-decoration: none;
+    /* background-color: rgb(0, 110, 110); */
+    background:linear-gradient(rgb(0, 69, 94),rgb(0, 166, 172));
+    width:100%;
+    height: var(--mh);
+    float:left;
+    transition-duration: 300ms;
+}
+.mynav>ul>li>ul>li>ul>li>a
+{
+     background-color: rgb(1, 61, 61);
+}
+.mynav>ul>li>ul>li>a
+{
+     background-color: rgb(10, 86, 86);
+}
+.mynav a:hover
+{
+     /* background-color: rgb(1, 43, 43); */
+      background:linear-gradient(rgb(236, 74, 193),rgb(39, 142, 146));
+     transition-duration: 300ms;
+}
+
+.mynav ul li ul
+{
+    display: none;
+    opacity: 0;
+        transition-duration: 300;
+}
+.mynav ul li:hover ul
+{
+    display: block;
+    opacity: 1;
+    transition-duration: 300;
+}
+.mynav ul li:hover ul li ul
+{
+    display: none;
+}
+.mynav ul li ul li:hover ul
+{
+    display: block;
+}
