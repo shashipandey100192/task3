@@ -1,0 +1,169 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+
+:root{
+    --w:100%;
+    --h:500px;
+
+}
+.navbar
+{
+    width:100%;
+    height: 50px;
+    background-color: rgb(1, 66, 66);
+    color:white;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top:0;
+    z-index: 99;
+}
+.navbar section
+{
+    /* border:1px solid yellow; */
+    flex:1;
+    padding:10px;
+}
+.navbar section:nth-child(2)
+{
+    flex:2;
+    text-align: center;
+}
+
+.navbar section:last-child
+{
+    text-align: right;
+}
+
+.menu
+{
+    list-style-type: none;
+    display: flex;
+    width: 70%;
+}
+.menu li
+{
+    flex:1;
+}
+.menu a
+{
+    color:white;
+    text-decoration: none;
+}
+.search input,button
+{
+    padding:10px;
+    float:left;
+}
+.search input{
+    background-color: transparent;
+    border:1px solid white;
+    color:white;
+}
+.search button
+{
+    margin:0;
+    margin-left: -1px;
+    margin-top:-1px;
+}
+.search input::placeholder
+{
+    color:white;
+}
+
+.page
+{
+    width:1200px;
+    height: auto;
+    border: 1px solid red;
+    margin-top:50px;
+    padding-top:28px;
+}
+.page section
+{
+    margin-top:10px;
+    min-height: 500px;
+    max-height: fit-content;
+    background-color: rgb(121, 123, 123);
+}
+.myheader
+{
+    height: 40px;
+    background-color: black;
+    color:white;
+    position: fixed;
+    z-index: 20;
+    width: 100%;
+}
+
+.slider
+{
+    width:var(--w);
+    height: var(--h);
+    border:1px solid red;
+    overflow: hidden;
+}
+.slider>header
+{
+    width:500%;
+    height: var(--h);
+    border:1px solid green;
+    position: relative;
+    animation:myslider 10s infinite ease-in-out;
+}
+.slider img
+{
+    width:20%;
+    height: var(--h);
+    float:left;
+ 
+}
+
+@keyframes myslider {
+    0%{left:0%}
+    20%{left:0%}
+    25%{left:-100%}
+    40%{left:-100%}
+    45%{left:-200%}
+    60%{left:-200%}
+    65%{left:-300%}
+    80%{left:-300%}
+    85%{left:-400%}
+    100%{left:-400%}
+}
+
+.page h3{
+    display: none;
+}
+
+
+
+@media print{
+
+    .navbar
+    {
+        display: none;
+    }
+    .myheader
+    {
+        display: none;
+    }
+    .page
+    {
+        width: 100%;
+        border:none;
+    }
+    .page section
+    {
+        background-color: transparent;
+        border:none;
+    }
+    .page h3{
+        display: block;
+        text-transform: uppercase;
+    }
+
+}
