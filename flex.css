@@ -1,0 +1,58 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+
+.row
+{
+    width:1200px;
+    height: 200px;
+    border:1px solid red;
+    display: flex;
+}
+.row>section
+{
+    border:1px solid green;
+    text-align: center;
+    padding:10px;
+    flex:1;
+    margin:5px;
+}
+
+.second
+{
+    margin-top:20px;
+    background-color: tomato;
+    height: auto;
+
+}
+.second>section
+{
+    background-color: blue;
+    color:white;
+}
+.abc
+{
+    flex:2.5 !important;
+}
+
+
+
+.third
+{
+    background-color: lightcyan;
+    flex-wrap: wrap;
+    height: auto;
+    margin-top:50px;
+    justify-content: space-around;
+}
+.third>section
+{
+    flex:none;
+    width:265px;
+    height: 200px;
+
+}
+
+

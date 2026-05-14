@@ -1,0 +1,100 @@
+*
+{
+    margin:0 auto;
+    padding:0;
+}
+
+.row
+{
+    width:1200px;
+    height: auto;
+    border:1px solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;;
+}
+.row>section
+{
+    width:200px;
+    height: 200px;
+    border:1px solid red;
+    margin: 5px;
+    background-image: url("https://lifencolors.in/cdn/shop/files/pastel-paradise-wallpaper.webp?v=1753691252");
+    background-size: 100% 100%;
+    color:white;
+    text-align: center;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+.solidback
+{
+    /* background-color: orange; */
+    /* background-color: #CED8FB; */
+    /* background-color: rgb(200,150,50); */
+    /* background-color: rgb(20%,50%,40%); */
+
+
+    /* background:linear-gradient(red,green,orange,pink); */
+    /* background:-webkit-linear-gradient(left,red,green,orange,pink); */
+    /* background:-webkit-linear-gradient(20deg,red,green,orange,pink); */
+    /* background:-webkit-radial-gradient(top right,red,green,orange,pink); */
+
+    /* background-image:url('https://i.pinimg.com/236x/c9/03/19/c903194d216430a3f5ef032f6b8bfb14.jpg');
+    background-repeat: no-repeat;
+    background-position: center 20%;
+    background-size: cover; */
+
+    background:red url('https://i.pinimg.com/236x/c9/03/19/c903194d216430a3f5ef032f6b8bfb14.jpg');
+    background-repeat: no-repeat;
+   
+
+}
+
+body{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREqRp5pzb59rEoOn3Z53TmEPbqzHvqf3wj5g&s');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.first
+{
+    width: 1200px;
+    padding:40px;
+    /* background-color: blue;
+    opacity: 0.1; */
+    background-color: rgba(0,0,255,0.1);
+    margin-top:50px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    line-height: 25px;
+    word-spacing: 5px;
+    letter-spacing: 1px;
+    color:white;
+    /* box-shadow: 5px 5px 5px black; */
+    /* box-shadow: inset 0px 0px 50px white; */
+    box-shadow: 0px 0px 5px 10px lightgray,0px 0px 5px 20px gray,0px 0px 0px 30px black;
+
+    
+}
+
+.second
+{
+    width:1200px;
+    height: 300px;
+    border:5px solid red;
+    margin-top:50px;
+    margin-bottom: 50px;
+    display: flex;
+}
+.second>section
+{
+    border:5px solid white;
+    padding:10px;
+    margin:5px;
+    flex:1;
+}
+.second>section:nth-child(1)
+{
+    flex:3;
+}
