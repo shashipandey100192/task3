@@ -1,0 +1,19 @@
+input,select
+{
+    padding:10px;
+}
+#cards
+{
+    border:1px solid red;
+}
+#cards section{
+    width:150px;
+    height: auto;
+    text-align: center;
+    font-size: 20px;
+    color:white;
+    background-color: rgb(27, 59, 59);
+    display: inline-block;
+    margin:10px;
+    padding:5px;
+}
