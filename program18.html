@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin:0 auto;
+            padding:0;
+        }
+        .outlet
+        {
+            width: 100%;
+            height: fit-content;
+            border:1px solid red;
+            box-sizing: border-box;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .outlet section
+        {
+            border:1px solid red;
+            margin:5px;
+            padding:5px;
+            width:230px;
+            height: auto;
+        }
+        .outlet img
+        {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    product pic:<input type="text" placeholder="product url"><br>
+    product Name:<input type="text" placeholder="product name"><br>
+    product qty:<input type="number" min="1" max="10"><br>
+    product price:<input type="text" placeholder="price"><br>
+    <input type="button" value="add product">
+</header>
+
+<div class="outlet">
+    
+</div>
+
+<script>
+    var myarr = [];
+    var inputobj = document.querySelectorAll("input");
+    var joutlet = document.querySelector(".outlet");
+    console.log(inputobj);
+    inputobj[4].addEventListener("click",()=>{
+        myarr.push({
+            productpic:inputobj[0].value,
+            productname:inputobj[1].value,
+            productqty:inputobj[2].value,
+            productprice:inputobj[3].value
+
+        });
+        console.log(myarr);
+        var card = myarr.map((d)=>{
+            return `
+                <section>
+                <img src="${d.productpic}">
+                <h1>${d.productname}</h1>
+                <h4>Qty:${d.productqty}</h4>
+                <h3>Price: ${d.productprice}</h3>
+                </section>
+            `;
+        })
+        joutlet.innerHTML=card.join("");
+
+    })
+
+</script>
+    
+</body>
+</html>
