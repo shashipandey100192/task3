@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&family=Bitcount+Ink:wght@100..900&family=Comic+Relief:wght@400;700&family=Concert+One&family=Condiment&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Michroma&family=Pacifico&family=Permanent+Marker&family=Pinyon+Script&family=Potta+One&display=swap');
+    </style>
+    <style>
+        h1 {
+            font-size: 80px;
+            letter-spacing: 10px;
+            font-family: "Comic Relief", system-ui;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        input {
+            font-size: 40px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1></h1>
+    <input type="text" placeholder="enter otp" maxlength="4">
+
+    <script>
+
+        var jinput;
+        var obj;
+        function myotp() {
+            var jheading = document.querySelector("h1");
+            jinput = document.querySelector("input");
+            obj = parseInt((Math.random() + 1) * 4536);
+            console.log(obj);
+            jheading.innerHTML = obj;
+
+
+        }
+
+        myotp();
+
+        jinput.addEventListener("input", () => {
+            console.log(jinput.value);
+
+            if (jinput.value.length == 4) {
+                if (jinput.value == obj) {
+                    jinput.style.backgroundColor="green";
+                    jinput.style.color="white";
+                    setTimeout(()=>{
+                            window.location.href="http://yarpadlo.in";
+                    },2000)
+                }
+                else {
+                    alert("wrong");
+                }
+            }
+            
+
+        })
+
+
+    </script>
+
+
+</body>
+
+</html>

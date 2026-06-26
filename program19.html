@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0 auto;
+            padding:0;
+        }
+        .cards
+        {
+            width:1200px;
+            height: fit-content;
+            border: 1px solid red;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .cards section
+        {
+            width:250px;
+            height: fit-content;
+            border:1px solid red;
+            margin:5px;
+            background-color: antiquewhite;
+            padding:5px;
+        }
+        .cards img
+        {
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+<body>
+
+<div class="cards"> </div>
+
+ <script>
+
+function mydata()
+{
+    var jcard = document.querySelector(".cards");
+    fetch("https://dummyjson.com/products?limit=194").then((r)=>{
+        return r.json()
+    }).then((d)=>{
+        console.log(d);
+        var mydata = d.products;
+
+        var mycard = mydata.map((c)=>{
+            return ` <section>
+                        <img src="${c.thumbnail}">
+                        <h2>${c.category}</h2>
+                        <h1>Price:${c.price}</h1>
+                         <h1>Stock:${c.stock}</h1>
+                    </section>`;
+        });
+        jcard.innerHTML=mycard.join("");
+
+    })
+}
+
+mydata();
+
+
+ </script>   
+</body>
+</html>
