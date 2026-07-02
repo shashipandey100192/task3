@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0 auto;
+            padding:0;
+        }
+        ul {
+            list-style-type: none;
+            height: 500px;
+            border: 1px solid red;
+            display: flex;
+            align-items: flex-end;
+            background-color: black;
+            min-width: 300px;
+            max-width: fit-content;
+        }
+
+        ul li {
+            float: left;
+            width: 50px;
+            /* border: 1px solid blue; */
+            text-align: center;
+            margin-left: 5px;
+            background-color: red;
+            color: white;
+            height: 50px;
+        }
+        ul li
+        {
+            background:linear-gradient(red,white);
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            padding-top: 5px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">400</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">300</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">500</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">250</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">440</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">350</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">350</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">350</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">450</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">110</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">280</li>
+        <li onmouseover="xyz(this)" onmouseout="abc(this)">350</li>
+    </ul>
+
+    <script>
+
+        function xyz(a) {
+            console.log(a);
+            a.style.height = a.innerHTML + "px";
+            a.style.transitionDuration = "500ms";
+        }
+
+        function abc(a) {
+            a.style.height = "50px";
+            a.style.transitionDuration = "500ms";
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>

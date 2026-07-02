@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2 class="first">this is heading</h2>
+<div>box3</div>
+<div>box4</div>
+<h1 id="one">this is heading one</h1>
+<div>box1</div>
+<div class="first">box2</div>
+<ul>
+    <li id="two">home1</li>
+    <li>home2</li>
+</ul>
+<span>mypage1</span><span>mypage2</span><span>mypage3</span>
+
+
+
+<script>
+    function abc()
+    {
+        // var a = document.getElementById('one');
+        // var a = document.getElementsByClassName('first');
+        // var a = document.getElementsByTagName('div');
+        // var a = document.querySelector('#one,.first,div');
+        var a = document.querySelectorAll('#one,.first,div');
+        console.log(a);
+     
+    }
+    abc();
+</script>
+
+
+    
+</body>
+</html>

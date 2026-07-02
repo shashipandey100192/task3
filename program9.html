@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+<h1>heading one</h1>
+
+    <input type="button" value="run" onclick="xyz()">
+    <script>
+
+        function xyz() {
+            var bg = prompt("enter color name");
+            if (confirm("do you want to change color")) {
+                var y = prompt("enter text color");
+                if (confirm("do you want to change text color")) {
+                    document.bgColor = bg;
+                    document.fgColor = y;
+                }
+                else {
+                    alert("nothing change");
+                }
+
+            }
+            else {
+                alert("can't change color");
+            }
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

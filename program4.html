@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one
+        {
+            color:red;
+            background-color: green;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .two{
+            line-height: 50px;
+        }
+        .three{
+            text-align: center;
+        }
+        .fourth
+        {
+            font-style: italic;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<h1 style="color:red">this is heading</h1>
+
+<ul>
+    <li>home</li>
+    <li>About</li>
+    <li>Contact</li>
+    <li>service</li>
+    <li>Others</li>
+</ul>
+
+<input type="button" value="remove data" onclick="abc()">
+<input type="button" value="add or remove" onclick="xyz()">
+<script>
+
+var a = document.querySelectorAll("ul>li");
+console.log(a[0]);
+a[0].style.color="green";
+a[0].style.backgroundColor="red";
+
+a[1].className="one";
+
+a[3].classList.add("one","two","three","fourth");
+
+
+function abc()
+{
+    a[3].classList.remove("three","fourth");
+}
+
+
+function xyz()
+{
+    a[4].classList.toggle("one");
+}
+
+
+</script>
+
+    
+</body>
+</html>

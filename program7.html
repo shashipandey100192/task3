@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>this is my container</h1>
+
+    <input type="button" onclick="abc()" value="count nuber">
+    <script>
+
+        var n = 10;
+        function abc() {
+            var heading = document.querySelector("h1");
+            heading.innerHTML = "count" + n;
+            n = n + 10;
+            if (n >= 200) {
+                clearInterval(x);
+            }
+        }
+
+        var x = setInterval("abc()", 1000);
+
+    </script>
+
+
+</body>
+
+</html>

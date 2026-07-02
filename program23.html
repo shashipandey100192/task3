@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #mylayout
+        {
+            border:1px solid gray;
+            background-color: antiquewhite;
+            border-radius: 20px;
+            padding:20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div id="mylayout">
+    <h1></h1>
+</div>
+
+
+
+    <script>
+
+        var subject = prompt("enter subject");
+
+        switch (subject) {
+            case 'mern':
+                alert("this is my" + subject);
+                studentdetails();
+                break;
+
+            case 'java':
+                alert("this is my" + subject);
+                studentdetails();
+                break;
+
+            case 'php':
+                alert("this is my" + subject);
+                studentdetails();
+                break;
+            default:
+                alert("this is not valid");
+        }
+
+        var name, age, fees;
+         var dis;
+
+        function enterdetails() {
+            name = prompt("enter sname");
+            age = prompt("enter age");
+            fees = prompt("enter fees");
+            feesmanagement();
+        }
+
+
+        function studentdetails() {
+            if (subject == "mern") {
+                enterdetails();
+            }
+            else if (subject == "java") {
+                enterdetails();
+            }
+            else {
+                return
+            }
+        }
+
+
+        function feesmanagement() {
+           
+            if (subject == "java" && fees >= 20000) {
+                dis = fees * 20 / 100;
+            }
+            else if(subject=="mern" && fees>=20000)
+            {
+                dis = fees*30/100;
+            }
+            else
+            {
+                dis =0;
+            }
+            console.log(dis);
+            printinvoice();
+
+        }
+
+function printinvoice()
+{
+    var jprint = document.getElementById('mylayout');
+    jprint.innerHTML=`
+        <h1>Subject:${subject}</h1>
+        <h1>Student Name:${name}</h1>
+        <h1>Student Age:${age}</h1>
+        <h1>Fees:${fees}</h1>
+        <h1>Discount:${dis}</h1>
+        <input type="button" value="print" onclick="pageprint()">
+    `;
+    
+
+}
+    
+
+function pageprint()
+{
+    window.print();
+}
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

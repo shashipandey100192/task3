@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .first
+        {
+            color:white;
+            background-color: black;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .first h1{
+            color:red;
+        }
+
+    </style>
+</head>
+<body>
+
+<h1>10-20-05</h1>
+<h1>10/20/05</h1>
+<input type="button" value="change theams" onclick="xyz()">
+
+<script>
+
+function abc()
+{
+    var heading= document.querySelectorAll("h1");
+    var a = new Date();
+    var h = a.getHours();
+    var m = a.getMinutes();
+    var s = a.getSeconds();
+
+    // var ctime = h+":"+m+":"+s;
+     var ctime = `${h} : ${m} : ${s}`;
+
+    heading[0].innerHTML= ctime;
+        if(h>=20 && m>=0 && s>=0)
+        {
+            alert("today class over");
+            xyz();
+        }
+}
+
+abc();
+setInterval("abc()",1000);
+
+function xyz()
+{
+    var jbody = document.querySelector('body');
+        jbody.classList.toggle('first');
+}
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>

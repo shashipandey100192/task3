@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2></h2>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <h3></h3>
+    
+<script>
+
+    var a = "Build with AI prompts, visual edits, or upload an image. No coding experience needed. Everything";
+    console.log(a);
+    console.log(typeof(a));
+
+
+    var b = new String("Build with AI prompts,  , or upload an image. No coding experience needed. Everything");
+    console.log(b);
+    console.log(typeof(b));
+var c = document.querySelectorAll("h2,p");
+    var d = b.slice(56,65)
+    .bold()
+    .italics()
+    .toUpperCase()
+    .fontcolor("red")
+    .concat("singh");
+
+    var f = b.slice(30,80);
+
+    c[0].innerHTML=b;
+    c[1].innerHTML=d;
+    c[2].innerHTML=f.replace("an","ooooo").repeat(3);
+
+var i=0;
+function abc()
+{
+    c[3].innerHTML+=b[i];
+    i++;
+    if(i==b.length)
+{
+    i=0;
+    c[3].innerHTML="";
+}
+}
+
+setInterval("abc()",100);
+
+
+
+
+</script>
+
+
+
+</body>
+</html>

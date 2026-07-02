@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .layout {
+            width: 70%;
+            height: 300px;
+            background-color: antiquewhite;
+            box-shadow: 2px 5px 10px black;
+            padding: 20px;
+            box-sizing: border-box;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body onresize="abc()">
+
+    <input type="button" value="get current location" onclick="xyz()">
+    <div class="layout">
+
+
+    </div>
+
+
+    <script>
+        function abc() {
+            var jlayout = document.querySelector(".layout");
+            var a = window.screen;
+            var mynav = window.navigator;
+
+
+            if (a.width >= 500) {
+                document.bgColor = "orange";
+            }
+            else {
+                document.bgColor = "white";
+            }
+            jlayout.innerHTML = `
+                <h1>width: ${a.width}</h1>
+                <h2>height :${a.height}</h2>
+                <h2>Color Depth :${a.colorDepth}</h2>
+                <h2>Orientation :${a.orientation.angle}</h2>
+                <h2>Orientation type :${a.orientation.type}</h2>
+                <h2>current version :${mynav.userAgentData.platform}</h2>
+                <h2>current version :${mynav.userAgentData.brands[1].version}</h2>
+         `;
+
+        }
+        abc();
+
+function xyz()
+{
+    navigator.geolocation.getCurrentPosition((d)=>{
+        console.log(d.coords);
+    })
+}
+
+
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <ul></ul>
+    <select></select>
+
+
+    <script>
+        // var a = 1;
+        //     for(a;a<=10;a++)
+        //     {
+        //         console.log(a);
+        //     }
+
+
+        // var a = 1;
+        //     while(a<=10)
+        //     {
+        //         console.log(a);
+        //         a++;
+        //     }
+
+
+        // var a = 1;
+        //     do
+        //     {
+        //         console.log(a);
+        //         a++;
+        //     }
+        //     while(a<=10)
+
+     var menu = ["home","about","contact","server","other"];   
+        var stop = prompt("enter last value");
+var myele = document.querySelectorAll("ul,select");
+console.log(myele);
+        var a = 0;
+        for(a;a<=stop;a++)
+    {
+        myele[0].innerHTML+=`<li>${menu[a]} ${a}</li>`;
+        myele[1].innerHTML+=`<option>${a}</option>`;
+
+    }
+    
+
+
+    </script>
+
+
+    
+</body>
+</html>
